@@ -1,0 +1,70 @@
+role,skill,category,importance
+Data Analyst,Python,Programming,High
+Data Analyst,SQL,Database,High
+Data Analyst,Pandas,Data Analysis,High
+Data Analyst,Statistics,Mathematics,High
+Data Analyst,Excel,Analytics,High
+Data Analyst,Power BI,Visualization,High
+Data Analyst,Tableau,Visualization,Medium
+Data Analyst,Git,Tools,Medium
+Data Scientist,Python,Programming,High
+Data Scientist,SQL,Database,High
+Data Scientist,Pandas,Data Analysis,High
+Data Scientist,NumPy,Data Analysis,High
+Data Scientist,Statistics,Mathematics,High
+Data Scientist,Scikit-learn,Machine Learning,High
+Data Scientist,Machine Learning,Machine Learning,High
+Data Scientist,Git,Tools,Medium
+Data Scientist,Docker,Deployment,Medium
+Machine Learning Engineer,Python,Programming,High
+Machine Learning Engineer,SQL,Database,Medium
+Machine Learning Engineer,Pandas,Data Analysis,High
+Machine Learning Engineer,NumPy,Data Analysis,High
+Machine Learning Engineer,Scikit-learn,Machine Learning,High
+Machine Learning Engineer,PyTorch,Deep Learning,High
+Machine Learning Engineer,Machine Learning,Machine Learning,High
+Machine Learning Engineer,Docker,Deployment,High
+Machine Learning Engineer,Git,Tools,High
+Machine Learning Engineer,MLOps,Deployment,High
+Machine Learning Engineer,AWS,Cloud,Medium
+Machine Learning Engineer,FastAPI,Backend,Medium
+AI Engineer,Python,Programming,High
+AI Engineer,Machine Learning,Machine Learning,High
+AI Engineer,Deep Learning,Deep Learning,High
+AI Engineer,PyTorch,Deep Learning,High
+AI Engineer,LLMs,Generative AI,High
+AI Engineer,RAG,Generative AI,High
+AI Engineer,LangChain,Generative AI,Medium
+AI Engineer,Vector Databases,Generative AI,High
+AI Engineer,FastAPI,Backend,Medium
+AI Engineer,Docker,Deployment,High
+AI Engineer,Git,Tools,Medium
+Backend Developer,Python,Programming,High
+Backend Developer,FastAPI,Backend,High
+Backend Developer,REST APIs,Backend,High
+Backend Developer,SQL,Database,High
+Backend Developer,PostgreSQL,Database,High
+Backend Developer,Git,Tools,High
+Backend Developer,Docker,Deployment,Medium
+Backend Developer,Linux,Operating System,Medium
+Backend Developer,System Design,Architecture,Medium
+DevOps Engineer,Linux,Operating System,High
+DevOps Engineer,Git,Tools,High
+DevOps Engineer,Docker,Deployment,High
+DevOps Engineer,Kubernetes,Deployment,High
+DevOps Engineer,AWS,Cloud,High
+DevOps Engineer,CI/CD,DevOps,High
+DevOps Engineer,Terraform,Infrastructure,Medium
+DevOps Engineer,Python,Programming,Medium
+DevOps Engineer,Networking,Infrastructure,High
+DevOps Engineer,Monitoring,DevOps,Medium
+Data Engineer,Python,Programming,High
+Data Engineer,SQL,Database,High
+Data Engineer,PostgreSQL,Database,High
+Data Engineer,ETL,Data Engineering,High
+Data Engineer,Data Warehousing,Data Engineering,High
+Data Engineer,Apache Spark,Big Data,High
+Data Engineer,Airflow,Data Engineering,High
+Data Engineer,Docker,Deployment,Medium
+Data Engineer,AWS,Cloud,Medium
+Data Engineer,Git,Tools,High
