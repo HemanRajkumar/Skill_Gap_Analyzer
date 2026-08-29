@@ -6,8 +6,227 @@
 <title>Skill Gap Analyzer</title>
 <style>
 :root{--nav:#071126;--primary:#5b4ce6;--primary2:#7668f5;--bg:#f7f8fc;--card:#fff;--text:#17203a;--muted:#6c7690;--border:#e4e7ef;--green:#18ae72;--orange:#f39a16;--red:#ef3f45}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text)}button,input,select,textarea{font:inherit}button{cursor:pointer}.app{min-height:100vh;display:grid;grid-template-columns:252px 1fr}.sidebar{background:linear-gradient(180deg,#071126,#0c1631);color:#fff;padding:22px 15px;display:flex;flex-direction:column;position:sticky;top:0;height:100vh}.logo{display:flex;align-items:center;gap:12px;padding:0 7px 20px;border-bottom:1px solid rgba(255,255,255,.14)}.logoIcon{width:48px;height:48px;border:3px solid #7466ef;border-radius:50%;display:grid;place-items:center;font-size:24px}.logoTitle{font-size:21px;font-weight:800;line-height:1}.logoTitle span{color:#8579ff}.nav{margin-top:20px;display:grid;gap:7px}.nav button{border:0;background:transparent;color:#e4e8f7;border-radius:9px;padding:12px 15px;text-align:left;display:flex;gap:14px;align-items:center;font-size:14px}.nav button.active,.nav button:hover{background:#5146d8;color:#fff}.navIcon{width:24px;text-align:center;font-size:20px}.themeBox{margin-top:22px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.05);border-radius:14px;padding:15px}.themeHeader{display:flex;justify-content:space-between;font-size:13px;font-weight:700;margin-bottom:9px}.themeOption{position:relative;width:100%;border:0;background:transparent;color:#dce2f2;border-radius:9px;padding:10px;text-align:left;font-size:12px}.themeOption.active{background:#5146d8;color:#fff}.themeDot{display:inline-block;width:19px;height:19px;border-radius:50%;vertical-align:middle;margin-right:8px;background:#fff}.themeCheck{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:20px;height:20px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#5146d8;font-weight:900}.proTip{margin-top:auto;border-radius:14px;padding:17px;background:linear-gradient(145deg,#3d3198,#4f45db);border:1px solid #7669ed}.proTip h4{margin:0 0 10px;font-size:13px}.proTip p{font-size:12px;line-height:1.6;opacity:.9}.proTip button{width:100%;border:0;border-radius:8px;background:#6558f0;color:#fff;padding:10px;font-weight:700}.main{padding:13px 18px 25px;min-width:0}.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}.header h1{font-size:21px;margin:0 0 3px}.header p{margin:0;color:var(--muted);font-size:12px}.headerActions{display:flex;align-items:center;gap:12px}.scoreTop{border:1px solid var(--border);border-radius:10px;background:#fff;padding:7px 16px;text-align:center}.scoreTop b{display:block;color:#17a66b;font-size:23px}.scoreTop span{font-size:10px;color:#17a66b}.themeBtn{width:42px;height:42px;border:1px solid var(--border);background:#fff;border-radius:50%;font-size:19px}.avatar{width:39px;height:39px;background:#17203a;color:#fff;border-radius:50%;display:grid;place-items:center;font-weight:700}.page{display:none}.page.active{display:block}.grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr) minmax(235px,.55fr);gap:16px}.card{background:var(--card);border:1px solid var(--border);border-radius:11px;padding:16px;min-width:0;box-shadow:0 10px 30px rgba(25,31,61,.05)}.heroLeft{min-height:330px}.heroRight{min-height:330px;display:flex;align-items:center}.label{font-size:13px;font-weight:800;margin-bottom:8px}select,.skillInputWrap{width:100%;min-height:44px;border:1px solid var(--border);border-radius:8px;background:#fff;color:var(--text)}select{padding:0 12px}.skillInputWrap{height:auto;min-height:83px;padding:9px;display:flex;flex-wrap:wrap;align-content:flex-start;gap:7px}.tag{background:#f0f0f4;border-radius:6px;padding:6px 8px;font-size:11px;display:flex;gap:7px;align-items:center}.tag button{border:0;background:none;padding:0;color:#6e7486}.skillInput{border:0;outline:0;min-width:150px;flex:1;padding:5px;background:transparent;color:var(--text)}.tip{font-size:10px;color:var(--muted);margin:8px 0 13px}.actionRow{display:flex;gap:10px}.primary{flex:1;border:0;border-radius:8px;background:linear-gradient(135deg,var(--primary),var(--primary2));color:#fff;padding:11px;font-weight:700}.secondary{border:1px solid var(--border);border-radius:8px;background:#fff;color:var(--primary);padding:11px 22px;font-weight:600}.aiTitle{color:var(--primary);font-size:16px;font-weight:800;margin-bottom:10px}.aiText{font-size:11px;color:var(--muted);line-height:1.65;max-width:280px}.checks{display:grid;gap:9px;margin-top:16px;font-size:11px}.checks span:before{content:"✓";width:18px;height:18px;border-radius:50%;display:inline-grid;place-items:center;background:#dff7ec;color:var(--green);margin-right:8px;font-weight:800}.aiVisual{margin-left:auto;font-size:68px;color:#776bf0;opacity:.55;line-height:.8}.sectionTitle{font-size:13px;font-weight:800;display:flex;align-items:center;gap:8px;margin-bottom:13px}.sectionTitle span{color:var(--primary)}.resultsCard{grid-column:1/2}.roadmapCard{grid-column:2/3}.reviewCard{grid-column:3/4;grid-row:1/span 2}.analysis{display:grid;grid-template-columns:135px 1fr;gap:15px;align-items:center}.ring{width:125px;height:125px;border-radius:50%;background:conic-gradient(var(--primary) 0 55%,#e7e9ee 55% 100%);display:grid;place-items:center;position:relative}.ring:after{content:"";position:absolute;width:95px;height:95px;border-radius:50%;background:#fff}.ringInner{position:relative;z-index:1;text-align:center}.ringInner b{display:block;font-size:26px}.ringInner small{font-size:9px;color:var(--muted)}.twoLists{display:grid;grid-template-columns:1fr 1fr;gap:10px}.listTitle{font-size:10px;font-weight:800;margin-bottom:7px}.green{color:var(--green)}.red{color:var(--red)}.skillRow{display:flex;justify-content:space-between;gap:4px;padding:7px;border-radius:6px;font-size:10px;margin-bottom:5px}.goodRow{background:#effaf5}.gapRow{background:#fff5ea}.badge{font-size:8px;padding:2px 5px;border-radius:5px;font-weight:700}.high{background:#ffe4e5;color:#d63138}.medium{background:#fff0d8;color:#c57900}.foundation{font-size:9px;color:var(--muted);line-height:1.5;margin-top:8px}.roadHeader{display:flex;justify-content:space-between;align-items:center;gap:10px}.generate{border:0;background:var(--primary);color:#fff;border-radius:7px;padding:9px 11px;font-size:10px;font-weight:700}.roadItem{display:grid;grid-template-columns:28px 1fr auto;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);align-items:start}.roadNum{width:25px;height:25px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:800;font-size:11px;background:var(--primary)}.roadItem h4{font-size:11px;margin:0}.roadItem p{font-size:9px;color:var(--muted);line-height:1.5;margin:4px 0 0}.details{border:1px solid var(--border);background:#fff;border-radius:6px;padding:7px;font-size:9px}.time{font-size:9px;color:var(--muted);white-space:nowrap}.fullRoadmap{width:100%;margin-top:9px;border:1px solid #cfc9ff;background:#faf9ff;color:var(--primary);border-radius:7px;padding:9px;font-size:10px;font-weight:700}.resources{grid-column:1/3}.resourceGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.resource{border:1px solid var(--border);border-radius:8px;padding:9px;display:flex;gap:8px;align-items:center}.resourceIcon{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#edf0ff;color:var(--primary);font-size:15px}.resource b{display:block;font-size:9px}.resource span{font-size:8px;color:var(--muted)}.reviewCard{padding:15px}.reviewBlock{border-bottom:1px solid var(--border);padding-bottom:13px;margin-bottom:13px}.reviewBlock:last-child{border-bottom:0}.reviewTitle{font-size:11px;font-weight:800;color:var(--primary);margin-bottom:8px}.reviewText,.reviewList li{font-size:9px;line-height:1.6;color:var(--muted)}.reviewList{padding-left:15px;margin:5px 0}.verdict{background:#faf9ff;border-radius:9px;padding:12px}.verdict b{color:var(--primary);font-size:10px}.pageHeader{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:15px}.pageHeader h2{margin:4px 0 6px;font-size:22px}.pageHeader p{margin:0;color:var(--muted);font-size:11px;line-height:1.6}.librarySearch input{width:100%;padding:13px;border:1px solid var(--border);border-radius:9px;background:var(--card);color:var(--text);outline:0;margin-bottom:14px}.skillsLibraryGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.skillLibraryCard{background:var(--card);border:1px solid var(--border);border-radius:11px;padding:15px;box-shadow:0 10px 30px rgba(25,31,61,.05)}.skillLibraryIcon{width:38px;height:38px;display:grid;place-items:center;border-radius:10px;background:#efedff;color:var(--primary);font-weight:900;margin-bottom:10px}.skillLibraryCard h3{margin:0 0 6px;font-size:14px}.skillLibraryCard p{font-size:10px;color:var(--muted);line-height:1.6;min-height:46px;margin:0 0 10px}.skillLibraryCard button{width:100%;border:1px solid #d8d3ff;background:#faf9ff;color:var(--primary);border-radius:7px;padding:8px;font-size:10px;font-weight:700}.analyzeGrid{display:grid;grid-template-columns:minmax(280px,.7fr) minmax(0,1.3fr);gap:15px}.analyzeSelect,#skillQuestion{width:100%;border:1px solid var(--border);border-radius:9px;background:var(--card);color:var(--text);outline:0}.analyzeSelect{height:44px;padding:0 12px}.questionLabel{margin-top:17px}#skillQuestion{min-height:160px;resize:vertical;padding:12px;line-height:1.6}.analyzeHint{font-size:10px;color:var(--muted);line-height:1.6;margin-top:9px}.skillAnalysisResult{min-height:350px}.analysisHeader{display:flex;align-items:center;gap:10px;padding-bottom:12px;border-bottom:1px solid var(--border);margin-bottom:14px}.analysisSkillIcon{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;background:#efedff;color:var(--primary);font-weight:900}.analysisHeader h3{margin:0;font-size:15px}.analysisHeader span{font-size:9px;color:var(--muted)}.markdown{font-size:11px;line-height:1.75}.markdown h1,.markdown h2,.markdown h3{color:var(--primary)}.markdown h1{font-size:20px}.markdown h2{font-size:17px;margin-top:18px}.markdown h3{font-size:14px;margin-top:16px}.markdown pre{background:#10172b;color:#eef2ff;padding:12px;border-radius:8px;overflow:auto}.markdown code{background:rgba(101,87,232,.08);color:var(--primary);padding:2px 5px;border-radius:4px}.loading{display:grid;place-items:center;gap:12px;min-height:250px;color:var(--muted);font-size:11px}.spinner{width:30px;height:30px;border:3px solid rgba(101,87,232,.15);border-top-color:var(--primary);border-radius:50%;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}.empty{padding:35px;text-align:center;color:var(--muted);font-size:11px;line-height:1.7}.toast{position:fixed;right:20px;bottom:20px;background:#17203a;color:#fff;padding:10px 14px;border-radius:8px;font-size:11px;display:none;z-index:100}.toast.show{display:block}.loadingOverlay{position:fixed;inset:0;background:rgba(7,12,28,.38);backdrop-filter:blur(3px);display:none;place-items:center;z-index:90}.loadingOverlay.show{display:grid}.loadingCard{background:var(--card);border-radius:14px;padding:24px;display:grid;gap:12px;place-items:center;box-shadow:0 20px 70px rgba(0,0,0,.2);font-size:11px}.modalBackdrop{position:fixed;inset:0;background:rgba(7,12,28,.5);backdrop-filter:blur(5px);display:grid;place-items:center;z-index:120;padding:18px}.modal{width:min(720px,100%);max-height:85vh;overflow:auto;background:var(--card);border:1px solid var(--border);border-radius:15px;padding:22px;position:relative}.modalClose{position:absolute;right:12px;top:8px;border:0;background:transparent;color:var(--muted);font-size:24px}.modal h2{margin:0 0 12px}.modalBody{font-size:11px;line-height:1.75}.modalFooter{display:flex;justify-content:flex-end;margin-top:16px}.modalFooter .primary{flex:0;min-width:120px}body.dark{--bg:#0b1020;--card:#151c31;--text:#edf1ff;--muted:#9da8c2;--border:#2a3450}body.dark .scoreTop,body.dark .themeBtn,body.dark .secondary,body.dark select,body.dark .skillInputWrap,body.dark .details,body.dark .fullRoadmap,body.dark .librarySearch input,body.dark .analyzeSelect,body.dark #skillQuestion{background:var(--card);color:var(--text)}body.dark .ring:after{background:var(--card)}body.dark .tag{background:#252d45}.ocean{--primary:#087fa5;--bg:#f1f8fa}.forest{--primary:#16865e;--bg:#f2f8f4}.sunset{--primary:#d55a32;--bg:#fff7f2}@media(max-width:1200px){.grid{grid-template-columns:1fr 1fr}.reviewCard{grid-column:1/3;grid-row:auto}.resources{grid-column:1/3}.skillsLibraryGrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:900px){.analyzeGrid{grid-template-columns:1fr}}@media(max-width:760px){.app{grid-template-columns:1fr}.sidebar{display:none}.main{padding:14px}.grid{grid-template-columns:1fr}.reviewCard,.resources,.resultsCard,.roadmapCard{grid-column:1}.scoreTop{display:none}.header{gap:10px}.skillsLibraryGrid{grid-template-columns:1fr}.resourceGrid{grid-template-columns:1fr 1fr}.analysis{grid-template-columns:1fr}.twoLists{grid-template-columns:1fr}}@media(max-width:450px){.resourceGrid{grid-template-columns:1fr}.actionRow{flex-direction:column}.secondary{width:100%}.roadItem{grid-template-columns:28px 1fr}.roadItem>div:last-child{grid-column:2}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text)}button,input,select,textarea{font:inherit}button{cursor:pointer}.app{min-height:100vh;display:grid;grid-template-columns:252px 1fr}.sidebar{background:linear-gradient(180deg,#071126,#0c1631);color:#fff;padding:22px 15px;display:flex;flex-direction:column;position:sticky;top:0;height:100vh;overflow:hidden}.logo{display:flex;align-items:center;gap:12px;padding:0 7px 20px;border-bottom:1px solid rgba(255,255,255,.14)}.logoIcon{width:48px;height:48px;border:3px solid #7466ef;border-radius:50%;display:grid;place-items:center;font-size:24px}.logoTitle{font-size:21px;font-weight:800;line-height:1}.logoTitle span{color:#8579ff}.nav{margin-top:20px;display:grid;gap:7px}.nav button{border:0;background:transparent;color:#e4e8f7;border-radius:9px;padding:12px 15px;text-align:left;display:flex;gap:14px;align-items:center;font-size:14px}.nav button.active,.nav button:hover{background:#5146d8;color:#fff}.navIcon{width:24px;text-align:center;font-size:20px}.themeBox{margin-top:22px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.05);border-radius:14px;padding:15px}.themeHeader{display:flex;justify-content:space-between;font-size:13px;font-weight:700;margin-bottom:9px}.themeOption{position:relative;width:100%;border:0;background:transparent;color:#dce2f2;border-radius:9px;padding:10px;text-align:left;font-size:12px}.themeOption.active{background:#5146d8;color:#fff}.themeDot{display:inline-block;width:19px;height:19px;border-radius:50%;vertical-align:middle;margin-right:8px;background:#fff}.themeCheck{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:20px;height:20px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#5146d8;font-weight:900}.main{padding:13px 18px 25px;min-width:0}.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}.header h1{font-size:21px;margin:0 0 3px}.header p{margin:0;color:var(--muted);font-size:12px}.headerActions{display:flex;align-items:center;gap:12px}.scoreTop{border:1px solid var(--border);border-radius:10px;background:#fff;padding:7px 16px;text-align:center}.scoreTop b{display:block;color:#17a66b;font-size:23px}.scoreTop span{font-size:10px;color:#17a66b}.themeBtn{width:42px;height:42px;border:1px solid var(--border);background:#fff;border-radius:50%;font-size:19px}.avatar{width:39px;height:39px;background:#17203a;color:#fff;border-radius:50%;display:grid;place-items:center;font-weight:700}.page{display:none}.page.active{display:block}.grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr) minmax(235px,.55fr);gap:16px}.card{background:var(--card);border:1px solid var(--border);border-radius:11px;padding:16px;min-width:0;box-shadow:0 10px 30px rgba(25,31,61,.05)}.heroLeft{min-height:330px}.heroRight{min-height:330px;display:flex;align-items:center}.label{font-size:13px;font-weight:800;margin-bottom:8px}select,.skillInputWrap{width:100%;min-height:44px;border:1px solid var(--border);border-radius:8px;background:#fff;color:var(--text)}select{padding:0 12px}.skillInputWrap{height:auto;min-height:83px;padding:9px;display:flex;flex-wrap:wrap;align-content:flex-start;gap:7px}.tag{background:#f0f0f4;border-radius:6px;padding:6px 8px;font-size:11px;display:flex;gap:7px;align-items:center}.tag button{border:0;background:none;padding:0;color:#6e7486}.skillInput{border:0;outline:0;min-width:150px;flex:1;padding:5px;background:transparent;color:var(--text)}.tip{font-size:10px;color:var(--muted);margin:8px 0 13px}.actionRow{display:flex;gap:10px}.primary{flex:1;border:0;border-radius:8px;background:linear-gradient(135deg,var(--primary),var(--primary2));color:#fff;padding:11px;font-weight:700}.secondary{border:1px solid var(--border);border-radius:8px;background:#fff;color:var(--primary);padding:11px 22px;font-weight:600}.aiTitle{color:var(--primary);font-size:16px;font-weight:800;margin-bottom:10px}.aiText{font-size:11px;color:var(--muted);line-height:1.65;max-width:280px}.checks{display:grid;gap:9px;margin-top:16px;font-size:11px}.checks span:before{content:"✓";width:18px;height:18px;border-radius:50%;display:inline-grid;place-items:center;background:#dff7ec;color:var(--green);margin-right:8px;font-weight:800}.aiVisual{margin-left:auto;font-size:68px;color:#776bf0;opacity:.55;line-height:.8}.sectionTitle{font-size:13px;font-weight:800;display:flex;align-items:center;gap:8px;margin-bottom:13px}.sectionTitle span{color:var(--primary)}.resultsCard{grid-column:1/2}.roadmapCard{grid-column:2/3;height:330px;display:flex;flex-direction:column;min-height:330px}.reviewCard{grid-column:3/4;grid-row:1/span 2}.analysis{display:grid;grid-template-columns:135px 1fr;gap:15px;align-items:center}.ring{width:125px;height:125px;border-radius:50%;background:conic-gradient(var(--primary) 0 55%,#e7e9ee 55% 100%);display:grid;place-items:center;position:relative}.ring:after{content:"";position:absolute;width:95px;height:95px;border-radius:50%;background:#fff}.ringInner{position:relative;z-index:1;text-align:center}.ringInner b{display:block;font-size:26px}.ringInner small{font-size:9px;color:var(--muted)}.twoLists{display:grid;grid-template-columns:1fr 1fr;gap:10px}.listTitle{font-size:10px;font-weight:800;margin-bottom:7px}.green{color:var(--green)}.red{color:var(--red)}.skillRow{display:flex;justify-content:space-between;gap:4px;padding:7px;border-radius:6px;font-size:10px;margin-bottom:5px}.goodRow{background:#effaf5}.gapRow{background:#fff5ea}.badge{font-size:8px;padding:2px 5px;border-radius:5px;font-weight:700}.high{background:#ffe4e5;color:#d63138}.medium{background:#fff0d8;color:#c57900}.foundation{font-size:9px;color:var(--muted);line-height:1.5;margin-top:8px}.roadmapCard #roadmap{flex:1;min-height:0;overflow-y:auto;overflow-x:hidden;margin-top:9px;scrollbar-width:thin;scrollbar-color:var(--primary) transparent}.roadmapCard #roadmap::-webkit-scrollbar{width:7px}.roadmapCard #roadmap::-webkit-scrollbar-track{background:transparent}.roadmapCard #roadmap::-webkit-scrollbar-thumb{background:var(--primary);border-radius:10px}.roadHeader{display:flex;justify-content:space-between;align-items:center;gap:10px}.generate{border:0;background:var(--primary);color:#fff;border-radius:7px;padding:9px 11px;font-size:10px;font-weight:700}.roadItem{display:grid;grid-template-columns:28px 1fr auto;gap:10px;padding:10px 0;border-bottom:1px solid var(--border);align-items:start}.roadNum{width:25px;height:25px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:800;font-size:11px;background:var(--primary)}.roadItem h4{font-size:11px;margin:0}.roadItem p{font-size:9px;color:var(--muted);line-height:1.5;margin:4px 0 0}.details{border:1px solid var(--border);background:#fff;border-radius:6px;padding:7px;font-size:9px}.time{font-size:9px;color:var(--muted);white-space:nowrap}.fullRoadmap{flex:0 0 auto;width:100%;margin-top:9px;border:1px solid #cfc9ff;background:#faf9ff;color:var(--primary);border-radius:7px;padding:9px;font-size:10px;font-weight:700}.resources{grid-column:1/3}.resourceGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.resource{border:1px solid var(--border);border-radius:8px;padding:9px;display:flex;gap:8px;align-items:center}.resourceIcon{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#edf0ff;color:var(--primary);font-size:15px}.resource b{display:block;font-size:9px}.resource span{font-size:8px;color:var(--muted)}.reviewCard{padding:15px}.reviewBlock{border-bottom:1px solid var(--border);padding-bottom:13px;margin-bottom:13px}.reviewBlock:last-child{border-bottom:0}.reviewTitle{font-size:11px;font-weight:800;color:var(--primary);margin-bottom:8px}.reviewText,.reviewList li{font-size:9px;line-height:1.6;color:var(--muted)}.reviewList{padding-left:15px;margin:5px 0}.verdict{background:#faf9ff;border-radius:9px;padding:12px}.verdict b{color:var(--primary);font-size:10px}.pageHeader{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:15px}.pageHeader h2{margin:4px 0 6px;font-size:22px}.pageHeader p{margin:0;color:var(--muted);font-size:11px;line-height:1.6}.librarySearch input{width:100%;padding:13px;border:1px solid var(--border);border-radius:9px;background:var(--card);color:var(--text);outline:0;margin-bottom:14px}.skillsLibraryGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.skillLibraryCard{background:var(--card);border:1px solid var(--border);border-radius:11px;padding:15px;box-shadow:0 10px 30px rgba(25,31,61,.05)}.skillLibraryIcon{width:38px;height:38px;display:grid;place-items:center;border-radius:10px;background:#efedff;color:var(--primary);font-weight:900;margin-bottom:10px}.skillLibraryCard h3{margin:0 0 6px;font-size:14px}.skillLibraryCard p{font-size:10px;color:var(--muted);line-height:1.6;min-height:46px;margin:0 0 10px}.skillLibraryCard button{width:100%;border:1px solid #d8d3ff;background:#faf9ff;color:var(--primary);border-radius:7px;padding:8px;font-size:10px;font-weight:700}.analyzeGrid{display:grid;grid-template-columns:minmax(280px,.7fr) minmax(0,1.3fr);gap:15px}.analyzeSelect,#skillQuestion{width:100%;border:1px solid var(--border);border-radius:9px;background:var(--card);color:var(--text);outline:0}.analyzeSelect{height:44px;padding:0 12px}.questionLabel{margin-top:17px}#skillQuestion{min-height:160px;resize:vertical;padding:12px;line-height:1.6}.analyzeHint{font-size:10px;color:var(--muted);line-height:1.6;margin-top:9px}.skillAnalysisResult{height:350px;min-height:0;overflow-y:auto;overflow-x:hidden;padding-right:8px;scrollbar-width:thin;scrollbar-color:var(--primary) transparent}.skillAnalysisResult::-webkit-scrollbar{width:7px}.skillAnalysisResult::-webkit-scrollbar-track{background:transparent}.skillAnalysisResult::-webkit-scrollbar-thumb{background:var(--primary);border-radius:10px}.analysisHeader{display:flex;align-items:center;gap:10px;padding-bottom:12px;border-bottom:1px solid var(--border);margin-bottom:14px}.analysisSkillIcon{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;background:#efedff;color:var(--primary);font-weight:900}.analysisHeader h3{margin:0;font-size:15px}.analysisHeader span{font-size:9px;color:var(--muted)}.markdown{font-size:11px;line-height:1.75}.markdown h1,.markdown h2,.markdown h3{color:var(--primary)}.markdown h1{font-size:20px}.markdown h2{font-size:17px;margin-top:18px}.markdown h3{font-size:14px;margin-top:16px}.markdown pre{background:#10172b;color:#eef2ff;padding:12px;border-radius:8px;overflow:auto}.markdown code{background:rgba(101,87,232,.08);color:var(--primary);padding:2px 5px;border-radius:4px}.loading{display:grid;place-items:center;gap:12px;min-height:250px;color:var(--muted);font-size:11px}.spinner{width:30px;height:30px;border:3px solid rgba(101,87,232,.15);border-top-color:var(--primary);border-radius:50%;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}.empty{padding:35px;text-align:center;color:var(--muted);font-size:11px;line-height:1.7}.toast{position:fixed;right:20px;bottom:20px;background:#17203a;color:#fff;padding:10px 14px;border-radius:8px;font-size:11px;display:none;z-index:100}.toast.show{display:block}.loadingOverlay{position:fixed;inset:0;background:rgba(7,12,28,.38);backdrop-filter:blur(3px);display:none;place-items:center;z-index:90}.loadingOverlay.show{display:grid}.loadingCard{background:var(--card);border-radius:14px;padding:24px;display:grid;gap:12px;place-items:center;box-shadow:0 20px 70px rgba(0,0,0,.2);font-size:11px}.modalBackdrop{position:fixed;inset:0;background:rgba(7,12,28,.5);backdrop-filter:blur(5px);display:grid;place-items:center;z-index:120;padding:18px}.modal{width:min(720px,100%);max-height:85vh;overflow:auto;background:var(--card);border:1px solid var(--border);border-radius:15px;padding:22px;position:relative}.fullAnalysisModal{width:min(1000px,96vw);max-height:90vh}.fullAnalysisModal .modalBody{max-height:70vh;overflow:auto;padding-right:8px}.fullAnalysisModal .modalBody::-webkit-scrollbar{width:7px}.fullAnalysisModal .modalBody::-webkit-scrollbar-thumb{background:var(--primary);border-radius:10px}.fullAnalysisModal .modalBody::-webkit-scrollbar-track{background:transparent}.modalClose{position:absolute;right:12px;top:8px;border:0;background:transparent;color:var(--muted);font-size:24px}.modal h2{margin:0 0 12px}.modalBody{font-size:11px;line-height:1.75}.modalFooter{display:flex;justify-content:flex-end;margin-top:16px}.modalFooter .primary{flex:0;min-width:120px}/* ===== Authentication / user header ===== */
+.authAction{display:flex;align-items:center;gap:8px}
+.loginRegisterBtn{border:1px solid var(--border);background:var(--card);color:var(--text);border-radius:22px;padding:10px 15px;font-size:12px;font-weight:800;display:inline-flex;align-items:center;gap:8px;text-decoration:none;white-space:nowrap;transition:.2s}
+.loginRegisterBtn:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-1px)}
+.userProfile{display:flex;align-items:center;gap:9px}
+.userName{font-size:12px;font-weight:800;color:var(--text);max-width:150px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.userAvatar{width:40px;height:40px;min-width:40px;border-radius:50%;display:grid;place-items:center;color:#fff;background:var(--primary);font-size:15px;font-weight:900;border:2px solid var(--card);box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.logoutBtn{border:1px solid var(--border);background:var(--card);color:var(--muted);border-radius:8px;padding:7px 9px;font-size:10px;font-weight:700}
+.logoutBtn:hover{color:var(--red);border-color:var(--red)}
+body.dark .loginRegisterBtn,body.dark .logoutBtn{background:var(--card);color:var(--text)}
+body.ocean .loginRegisterBtn:hover{border-color:#087fa5;color:#087fa5}
+body.forest .loginRegisterBtn:hover{border-color:#16865e;color:#16865e}
+body.sunset .loginRegisterBtn:hover{border-color:#d55a32;color:#d55a32}
+@media(max-width:760px){.userName{display:none}.loginRegisterBtn{padding:9px 11px;font-size:11px}.userProfile{gap:5px}}
+body.dark{--bg:#0b1020;--card:#151c31;--text:#edf1ff;--muted:#9da8c2;--border:#2a3450}body.dark .scoreTop,body.dark .themeBtn,body.dark .secondary,body.dark select,body.dark .skillInputWrap,body.dark .details,body.dark .fullRoadmap,body.dark .librarySearch input,body.dark .analyzeSelect,body.dark #skillQuestion{background:var(--card);color:var(--text)}body.dark .ring:after{background:var(--card)}body.dark .tag{background:#252d45}.ocean{--primary:#087fa5;--bg:#f1f8fa}.forest{--primary:#16865e;--bg:#f2f8f4}.sunset{--primary:#d55a32;--bg:#fff7f2}@media(max-width:1200px){.grid{grid-template-columns:1fr 1fr}.reviewCard{grid-column:1/3;grid-row:auto}.resources{grid-column:1/3}.skillsLibraryGrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:900px){.analyzeGrid{grid-template-columns:1fr}.skillAnalysisResult{height:360px;overflow-y:auto}.roadmapCard{height:330px;min-height:330px}}@media(max-width:760px){.app{grid-template-columns:1fr}.sidebar{display:none}.main{padding:14px}.grid{grid-template-columns:1fr}.reviewCard,.resources,.resultsCard,.roadmapCard{grid-column:1}.scoreTop{display:none}.header{gap:10px}.skillsLibraryGrid{grid-template-columns:1fr}.resourceGrid{grid-template-columns:1fr 1fr}.analysis{grid-template-columns:1fr}.twoLists{grid-template-columns:1fr}}@media(max-width:450px){.resourceGrid{grid-template-columns:1fr}.actionRow{flex-direction:column}.secondary{width:100%}.roadItem{grid-template-columns:28px 1fr}.roadItem>div:last-child{grid-column:2}}
+
+/* ===== Theme-aware sidebar/menu =====
+   The existing theme() function changes the body class.
+   These rules make the sidebar follow that same selected theme.
+*/
+body.light .sidebar{
+  background:linear-gradient(180deg,#071126,#0c1631)!important;
+  color:#fff;
+}
+body.dark .sidebar{
+  background:linear-gradient(180deg,#030611,#080d1b)!important;
+  color:#edf1ff;
+}
+body.ocean .sidebar{
+  background:linear-gradient(180deg,#063447,#087fa5)!important;
+  color:#fff;
+}
+body.forest .sidebar{
+  background:linear-gradient(180deg,#063323,#16865e)!important;
+  color:#fff;
+}
+body.sunset .sidebar{
+  background:linear-gradient(180deg,#35160c,#d55a32)!important;
+  color:#fff;
+}
+
+body.light .sidebar .themeBox,
+body.dark .sidebar .themeBox,
+body.ocean .sidebar .themeBox,
+body.forest .sidebar .themeBox,
+body.sunset .sidebar .themeBox{
+  background:rgba(255,255,255,.08)!important;
+  border-color:rgba(255,255,255,.22)!important;
+}
+
+body.ocean .sidebar .nav button.active{
+  background:#087fa5!important;
+}
+body.forest .sidebar .nav button.active{
+  background:#16865e!important;
+}
+body.sunset .sidebar .nav button.active{
+  background:#d55a32!important;
+}
+body.dark .sidebar .nav button.active{
+  background:#5146d8!important;
+}
+
+body.ocean .sidebar .themeOption.active{
+  background:#087fa5!important;
+}
+body.forest .sidebar .themeOption.active{
+  background:#16865e!important;
+}
+body.sunset .sidebar .themeOption.active{
+  background:#d55a32!important;
+}
+
+/* Keep menu text/icons readable on every themed sidebar. */
+body.dark .sidebar .nav button,
+body.ocean .sidebar .nav button,
+body.forest .sidebar .nav button,
+body.sunset .sidebar .nav button,
+body.light .sidebar .nav button{
+  color:#fff!important;
+}
+
+
+/* =========================================================
+   FINAL THEME POLISH
+   - Logo / Skill Gap Analyzer follows the selected theme
+   - Theme circles keep their own colors and never merge
+     with the selected theme background
+   ========================================================= */
+
+/* Keep the logo readable and visually consistent in every theme. */
+.logo{
+  color:#ffffff!important;
+  border-bottom-color:rgba(255,255,255,.18)!important;
+}
+.logoIcon{
+  color:#ffffff!important;
+  border-color:#8b7fff!important;
+  background:rgba(139,127,255,.10)!important;
+  box-shadow:0 0 0 3px rgba(139,127,255,.08);
+}
+.logoTitle{
+  color:#ffffff!important;
+}
+.logoTitle span{
+  color:#9b8fff!important;
+}
+
+/* Theme circles are independent of the selected theme.
+   The border/shadow prevents the circle from visually
+   disappearing into the active theme row. */
+.themeDot{
+  width:20px!important;
+  height:20px!important;
+  min-width:20px!important;
+  min-height:20px!important;
+  display:inline-block!important;
+  vertical-align:middle!important;
+  margin-right:9px!important;
+  border-radius:50%!important;
+  box-sizing:border-box!important;
+  border:2px solid rgba(255,255,255,.95)!important;
+  box-shadow:
+    0 0 0 1px rgba(0,0,0,.25),
+    0 2px 5px rgba(0,0,0,.22)!important;
+}
+
+/* Fixed, clearly separated colors for the five theme choices. */
+.themeOption[data-theme="light"] .themeDot{
+  background:#ffffff!important;
+  border-color:#d7dbea!important;
+}
+.themeOption[data-theme="dark"] .themeDot{
+  background:#0b1020!important;
+  border-color:#6f7892!important;
+}
+.themeOption[data-theme="ocean"] .themeDot{
+  background:#087fa5!important;
+  border-color:#63c7df!important;
+}
+.themeOption[data-theme="forest"] .themeDot{
+  background:#16865e!important;
+  border-color:#62d0a2!important;
+}
+.themeOption[data-theme="sunset"] .themeDot{
+  background:#d55a32!important;
+  border-color:#ffad8d!important;
+}
+
+/* Active row gets a clean check without covering the color circle. */
+.themeOption{
+  display:flex!important;
+  align-items:center!important;
+  gap:0!important;
+}
+.themeOption.active{
+  padding-right:38px!important;
+}
+.themeOption.active .themeDot{
+  flex:0 0 20px!important;
+}
+
+/* Make the check mark clearly separate from the colored circle. */
+.themeCheck{
+  right:10px!important;
+  width:20px!important;
+  height:20px!important;
+  background:#ffffff!important;
+  color:#5146d8!important;
+  border:1px solid rgba(0,0,0,.10)!important;
+  box-shadow:0 1px 4px rgba(0,0,0,.20)!important;
+  z-index:2;
+}
+
+/* Keep the logo and menu strong on each themed sidebar. */
+body.dark .logoTitle span{color:#a89dff!important}
+body.ocean .logoTitle span{color:#8ee7ff!important}
+body.forest .logoTitle span{color:#8be3b9!important}
+body.sunset .logoTitle span{color:#ffc0a8!important}
+
+body.ocean .logoIcon{border-color:#65d8f2!important;background:rgba(8,127,165,.18)!important}
+body.forest .logoIcon{border-color:#70d8aa!important;background:rgba(22,134,94,.18)!important}
+body.sunset .logoIcon{border-color:#ffab88!important;background:rgba(213,90,50,.18)!important}
+
+
+/* ===== Skill Library technology logos ===== */
+.skillLibraryIcon{
+  width:52px;
+  height:52px;
+  display:grid;
+  place-items:center;
+  border-radius:12px;
+  background:#efedff;
+  color:var(--primary);
+  font-weight:900;
+  margin-bottom:10px;
+  flex-shrink:0;
+  overflow:hidden;
+}
+.skillLibraryIcon i{
+  font-size:31px;
+  line-height:1;
+}
+.skillLibraryIcon .skillFallback{
+  font-size:20px;
+  font-weight:900;
+}
+body.dark .skillLibraryIcon{
+  background:#252d45;
+  color:#a99fff;
+}
+
+
+.skillLibraryIcon .skillCustomLogo{
+  font-size:27px;
+  line-height:1;
+  font-weight:900;
+  font-family:Inter,ui-sans-serif,system-ui,sans-serif;
+}
 </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 <body>
 <div class="app">
@@ -28,10 +247,9 @@
     <button class="themeOption" data-theme="forest"><span class="themeDot" style="background:#16865e"></span>● Forest</button>
     <button class="themeOption" data-theme="sunset"><span class="themeDot" style="background:#d55a32"></span>◒ Sunset</button>
   </div>
-  <div class="proTip"><h4>✦ Pro Tip</h4><p>Use the Analyze page to study one skill in depth with Gemini and your own knowledge base.</p><button type="button" onclick="navigate('analyze')">Analyze a Skill</button></div>
 </aside>
 <main class="main">
-<header class="header"><div><h1>Welcome back! 👋</h1><p>Let's bridge your skill gap and achieve your goals.</p></div><div class="headerActions"><div class="scoreTop"><b id="topScore">0%</b><span>Overall Match</span></div><button class="themeBtn" id="themeButton">☼</button><div class="avatar">H</div></div></header>
+<header class="header"><div><h1>Welcome back! 👋</h1><p>Let's bridge your skill gap and achieve your goals.</p></div><div class="headerActions"><div class="scoreTop"><b id="topScore">0%</b><span>Overall Match</span></div><div id="authHeader" class="authAction"></div></div></header>
 
 <section id="dashboardPage" class="page active"><div class="grid">
 <section class="card heroLeft">
@@ -57,38 +275,153 @@
 <section class="card resources"><div class="sectionTitle"><span>♧</span>Recommended Learning Resources</div><div class="resourceGrid"><div class="resource"><div class="resourceIcon">C</div><div><b>Coursera</b><span>Structured learning</span></div></div><div class="resource"><div class="resourceIcon">u</div><div><b>Udemy</b><span>Practical courses</span></div></div><div class="resource"><div class="resourceIcon">▶</div><div><b>YouTube</b><span>Free tutorials</span></div></div><div class="resource"><div class="resourceIcon">◎</div><div><b>Knowledge Base</b><span>Your local docs</span></div></div></div></section>
 </div></section>
 
-<section id="analyzePage" class="page"><div class="pageHeader"><div class="aiTitle">✦ Skill Analyzer</div><h2>Analyze Any Skill Separately</h2><p>Select a skill from your knowledge base and ask Gemini for a focused technical analysis. This is separate from the dashboard's overall skill-gap calculation.</p></div><div class="analyzeGrid"><section class="card"><div class="label">Select Skill</div><select id="analyzeSkill" class="analyzeSelect"><option value="">Loading skills...</option></select><div class="label questionLabel">Ask a Question</div><textarea id="skillQuestion" placeholder="Example: Explain NumPy arrays with practical examples, key concepts, interview questions, and what I should learn next."></textarea><div class="analyzeHint">💡 Leave the question empty for a complete analysis of the selected skill.</div><button class="primary" id="analyzeSkillButton" style="margin-top:14px">✦ Analyze Skill with Gemini</button></section><section class="card"><div class="sectionTitle"><span>✦</span>AI Skill Analysis</div><div id="skillAnalysisResult" class="skillAnalysisResult"><div class="empty"><b>Select a skill</b><br>Then click <b>Analyze Skill with Gemini</b>.</div></div></section></div></section>
+<section id="analyzePage" class="page"><div class="pageHeader"><div class="aiTitle">✦ Skill Analyzer</div><h2>Analyze Any Skill Separately</h2><p>Select a skill from your knowledge base and ask Gemini for a focused technical analysis. This is separate from the dashboard's overall skill-gap calculation.</p></div><div class="analyzeGrid"><section class="card"><div class="label">Select Skill</div><select id="analyzeSkill" class="analyzeSelect"><option value="">Loading skills...</option></select><div class="label questionLabel">Ask a Question</div><textarea id="skillQuestion" placeholder="Example: Explain NumPy arrays with practical examples, key concepts, interview questions, and what I should learn next."></textarea><div class="analyzeHint">💡 Leave the question empty for a complete analysis of the selected skill.</div><button class="primary" id="analyzeSkillButton" style="margin-top:14px">✦ Analyze Skill with Gemini</button></section><section class="card"><div class="sectionTitle"><span>✦</span>AI Skill Analysis<button class="secondary" id="viewFullSkillAnalysis" style="margin-left:auto;padding:7px 10px;font-size:9px">Full View →</button></div><div id="skillAnalysisResult" class="skillAnalysisResult"><div class="empty"><b>Select a skill</b><br>Then click <b>Analyze Skill with Gemini</b>.</div></div></section></div></section>
 
-<section id="roadmapPage" class="page"><div class="pageHeader"><div class="aiTitle">✦ Personalized Roadmap</div><h2>Your Learning Roadmap</h2><p>Your roadmap is generated from the selected target role, current skills, skill gaps, and knowledge base.</p></div><section class="card"><div id="fullRoadmapPage" class="skillAnalysisResult"><div class="empty">Generate a roadmap from the Dashboard first.</div></div></section></section>
+<section id="roadmapPage" class="page"><div class="pageHeader"><div class="aiTitle">✦ Personalized Roadmap</div><h2>Your Learning Roadmap</h2><p>Your roadmap is generated from the selected target role, current skills, skill gaps, and knowledge base.</p></div><section class="card"><div id="fullRoadmapPage" class="fullRoadmapPageContent"><div class="empty">Generate a roadmap from the Dashboard first.</div></div></section></section>
 
 <section id="skillsPage" class="page"><div class="pageHeader"><div class="aiTitle">▤ Skills Library</div><h2>Explore Your Knowledge Base</h2><p>Skills are loaded automatically from <b>data/knowledge_base</b>. Add a new Markdown file and restart or refresh the app to make it available.</p></div><div class="librarySearch"><input id="skillSearch" placeholder="Search Python, NumPy, Pandas, SQL..."></div><div id="skillsLibraryGrid" class="skillsLibraryGrid"><div class="empty">Loading your knowledge base...</div></div></section>
 
 <section id="savedPage" class="page"><div class="pageHeader"><div class="aiTitle">♡ Saved Roadmaps</div><h2>Your Saved Learning Plans</h2><p>Roadmaps generated in this browser session are stored locally.</p></div><section class="card"><div id="savedRoadmaps"><div class="empty">No saved roadmaps yet.</div></div></section></section>
 </main></div><div class="toast" id="toastBox"></div><div class="loadingOverlay" id="loadingOverlay"><div class="loadingCard"><div class="spinner"></div><div id="loadingMessage">Working…</div></div></div>
 <script>
-const defaultSkills=["Python","Pandas","SQL","Scikit-learn","Git","NumPy"];let analysisData=null,latestRoadmap="",allLibrarySkills=[],toastTimer;
+const defaultSkills=["Python","Pandas","SQL","Scikit-learn","Git","NumPy"];let analysisData=null,latestRoadmap="",allLibrarySkills=[],toastTimer;let analyzeBusy=false,roadmapBusy=false,skillAnalyzeBusy=false;
 const $=id=>document.getElementById(id);function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]))}function toast(m){const b=$("toastBox");b.textContent=m;b.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>b.classList.remove("show"),2200)}function setLoading(v,m){$("loadingOverlay").classList.toggle("show",v);$("loadingMessage").textContent=m||"Working…"}function skills(){return [...document.querySelectorAll("#skills .tag")].map(x=>x.textContent.replace("×","").trim())}
 function navigate(page){document.querySelectorAll(".page").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".nav button").forEach(x=>x.classList.toggle("active",x.dataset.page===page));const p=$(page+"Page");if(p)p.classList.add("active");if(page==="skills")loadSkills();if(page==="saved")renderSaved();if(page==="roadmap")renderFullRoadmap()}
 function addSkill(v){v=v.trim();if(!v)return;if(skills().some(x=>x.toLowerCase()===v.toLowerCase()))return toast("Skill already added");const i=$("skillInput"),t=document.createElement("span");t.className="tag";t.innerHTML=`${esc(v)} <button type="button" data-remove>×</button>`;$("skills").insertBefore(t,i);i.value=""}
 function resetSkills(){const w=$("skills"),i=$("skillInput");w.querySelectorAll(".tag").forEach(x=>x.remove());defaultSkills.forEach(s=>{const t=document.createElement("span");t.className="tag";t.innerHTML=`${esc(s)} <button type="button" data-remove>×</button>`;w.insertBefore(t,i)});analysisData=null;latestRoadmap="";localStorage.removeItem("skillGapAnalysis");localStorage.removeItem("skillGapRoadmap");$("score").textContent="0%";$("topScore").textContent="0%";$("matchedCount").textContent="0";$("gapCount").textContent="0";$("matched").innerHTML="";$("gaps").innerHTML="";$("roadmap").innerHTML='<div class="empty">Analyze your skills first, then generate your personalized Gemini roadmap.</div>';toast("Reset complete")}
-async function api(url,opts={}){const r=await fetch(url,{...opts,headers:{"Content-Type":"application/json",...(opts.headers||{})}});let d={};try{d=await r.json()}catch{}if(!r.ok)throw Error(d.detail||d.message||`Request failed (${r.status})`);return d}
+async function api(url,opts={}){const r=await fetch(url,{...opts,headers:{"Content-Type":"application/json",...(opts.headers||{})}});let d={};try{d=await r.json()}catch{}if(!r.ok){const msg=d.detail||d.message||`Request failed (${r.status})`;if(r.status===429)throw Error("Gemini API quota is exhausted. Wait for the quota to reset or use a project/key with available quota.");throw Error(msg)}return d}
 async function loadRoles(){try{const d=await api("/api/roles");$("role").innerHTML=d.roles.map(x=>`<option>${esc(x)}</option>`).join("");const old=localStorage.getItem("skillGapRole");if(old&&d.roles.includes(old))$("role").value=old}catch(e){$("role").innerHTML='<option>Machine Learning Engineer</option>';toast("Could not load roles from API")}}
 function render(d){analysisData=d;localStorage.setItem("skillGapAnalysis",JSON.stringify(d));localStorage.setItem("skillGapRole",d.role);const p=Math.round(Number(d.match_percentage)||0);$("score").textContent=p+"%";$("topScore").textContent=p+"%";$("matchedCount").textContent=d.matched_skills.length;$("gapCount").textContent=d.skill_gaps.length;$("matched").innerHTML=d.matched_skills.map(s=>`<div class="skillRow goodRow">✓ ${esc(s)}</div>`).join("")||'<div class="empty" style="padding:10px">No matched skills.</div>';$('gaps').innerHTML=d.skill_gaps.map(g=>`<div class="skillRow gapRow">⚠ ${esc(g.skill)}<span class="badge ${g.importance==='High'?'high':'medium'}">${esc(g.importance)}</span></div>`).join("")||'<div class="empty" style="padding:10px">No gaps 🎉</div>';$('scoreRing').style.background=`conic-gradient(var(--primary) 0 ${p}%,#e7e9ee ${p}% 100%)`}
-async function analyze(){const role=$("role").value,s=skills();if(!role||!s.length)return toast(!role?"Select a target role":"Add at least one skill");const b=$("analyze");b.disabled=true;b.textContent="Analyzing…";try{const d=await api("/api/analyze",{method:"POST",body:JSON.stringify({target_role:role,skills:s})});render(d);toast(`Analysis complete · ${d.match_percentage}% match`)}catch(e){toast(e.message)}finally{b.disabled=false;b.textContent="✦ Analyze My Skills"}}
+async function analyze(){if(analyzeBusy)return;const role=$("role").value,s=skills();if(!role||!s.length)return toast(!role?"Select a target role":"Add at least one skill");const b=$("analyze");analyzeBusy=true;b.disabled=true;b.textContent="Analyzing…";try{const d=await api("/api/analyze",{method:"POST",body:JSON.stringify({target_role:role,skills:s})});render(d);toast(`Analysis complete · ${d.match_percentage}% match`)}catch(e){toast(e.message)}finally{analyzeBusy=false;b.disabled=false;b.textContent="✦ Analyze My Skills"}}
 function md(s){let x=esc(s||"");x=x.replace(/```([\s\S]*?)```/g,"<pre>$1</pre>").replace(/^### (.*)$/gm,"<h3>$1</h3>").replace(/^## (.*)$/gm,"<h2>$1</h2>").replace(/^# (.*)$/gm,"<h1>$1</h1>").replace(/\*\*(.*?)\*\*/g,"<strong>$1</strong>").replace(/`([^`]+)`/g,"<code>$1</code>");x=x.replace(/^\s*[-*] (.*)$/gm,"<li>$1</li>").replace(/((?:<li>.*<\/li>\n?)+)/g,"<ul>$1</ul>").replace(/\n{2,}/g,"<br><br>").replace(/\n/g,"<br>");return x}
-async function generate(){const d=analysisData||JSON.parse(localStorage.getItem("skillGapAnalysis")||"null");if(!d)return toast("Analyze your skills first");if(!d.skill_gaps.length)return toast("No skill gaps — you're ready! 🎉");const b=$("generate");b.disabled=true;setLoading(true,"Gemini is building your personalized roadmap…");try{const p=await api("/api/roadmap",{method:"POST",body:JSON.stringify({target_role:d.role,current_skills:d.matched_skills,missing_skills:d.skill_gaps.map(g=>g.skill)})});latestRoadmap=p.roadmap||"";localStorage.setItem("skillGapRoadmap",latestRoadmap);$("roadmap").innerHTML=`<div class="markdown">${md(latestRoadmap)}</div>`;saveRoadmap(d,latestRoadmap);toast("Gemini roadmap generated")}catch(e){toast(e.message)}finally{setLoading(false);b.disabled=false;b.textContent="Regenerate Roadmap ✨"}}
+async function generate(){if(roadmapBusy)return;const d=analysisData||JSON.parse(localStorage.getItem("skillGapAnalysis")||"null");if(!d)return toast("Analyze your skills first");if(!d.skill_gaps.length)return toast("No skill gaps — you're ready! 🎉");const b=$("generate");roadmapBusy=true;b.disabled=true;setLoading(true,"Gemini is building your personalized roadmap…");try{const p=await api("/api/roadmap",{method:"POST",body:JSON.stringify({target_role:d.role,current_skills:d.matched_skills,missing_skills:d.skill_gaps.map(g=>g.skill)})});latestRoadmap=p.roadmap||"";localStorage.setItem("skillGapRoadmap",latestRoadmap);$("roadmap").innerHTML=`<div class="markdown">${md(latestRoadmap)}</div>`;saveRoadmap(d,latestRoadmap);toast("Gemini roadmap generated")}catch(e){toast(e.message)}finally{roadmapBusy=false;setLoading(false);b.disabled=false;b.textContent="Regenerate Roadmap ✨"}}
 function renderFullRoadmap(){const r=latestRoadmap||localStorage.getItem("skillGapRoadmap")||"";$("fullRoadmapPage").innerHTML=r?`<div class="markdown">${md(r)}</div>`:'<div class="empty">Generate a roadmap from the Dashboard first.</div>'}
 function saveRoadmap(d,r){const a=JSON.parse(localStorage.getItem("skillGapSavedRoadmaps")||"[]");a.unshift({id:Date.now(),role:d.role,match:d.match_percentage,roadmap:r});localStorage.setItem("skillGapSavedRoadmaps",JSON.stringify(a.slice(0,5)))}
 function renderSaved(){const a=JSON.parse(localStorage.getItem("skillGapSavedRoadmaps")||"[]");$("savedRoadmaps").innerHTML=a.length?a.map(x=>`<div class="skillLibraryCard" style="margin-bottom:10px"><h3>${esc(x.role)}</h3><p>Match: ${esc(x.match)}%</p><button type="button" data-saved="${x.id}">View Roadmap →</button></div>`).join(""):'<div class="empty">No saved roadmaps yet.</div>';document.querySelectorAll("[data-saved]").forEach(b=>b.onclick=()=>{const x=a.find(v=>String(v.id)===b.dataset.saved);if(x)openModal(x.role,x.roadmap)})}
 async function loadSkills(){try{const d=await api("/api/skills");allLibrarySkills=d.skills||[];renderLibrary(allLibrarySkills);populateAnalyze(allLibrarySkills)}catch(e){$("skillsLibraryGrid").innerHTML=`<div class="empty">Could not load the knowledge base.<br><br>${esc(e.message)}</div>`}}
-function renderLibrary(list){$("skillsLibraryGrid").innerHTML=list.length?list.map(s=>`<div class="skillLibraryCard"><div class="skillLibraryIcon">${esc((s.name||"S")[0].toUpperCase())}</div><h3>${esc(s.name)}</h3><p>Technical learning material from your local knowledge base.</p><button type="button" data-skill="${esc(s.slug)}">View Skill Details →</button></div>`).join(""):'<div class="empty">No skills found.</div>';document.querySelectorAll("[data-skill]").forEach(b=>b.onclick=()=>skillDetails(b.dataset.skill))}
+
+const skillIconMap={
+  "python":"devicon-python-plain colored",
+  "pandas":"devicon-pandas-plain colored",
+  "numpy":"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg",
+  "scikit-learn":"devicon-scikitlearn-plain colored",
+  "scikit learn":"devicon-scikitlearn-plain colored",
+  "sklearn":"devicon-scikitlearn-plain colored",
+  "javascript":"devicon-javascript-plain colored",
+  "typescript":"devicon-typescript-plain colored",
+  "java":"devicon-java-plain colored",
+  "c":"devicon-c-plain colored",
+  "c++":"devicon-cplusplus-plain colored",
+  "c#":"devicon-csharp-plain colored",
+  "html":"devicon-html5-plain colored",
+  "html5":"devicon-html5-plain colored",
+  "css":"devicon-css3-plain colored",
+  "css3":"devicon-css3-plain colored",
+  "react":"devicon-react-original colored",
+  "angular":"devicon-angularjs-plain colored",
+  "vue":"devicon-vuejs-plain colored",
+  "node.js":"devicon-nodejs-plain colored",
+  "nodejs":"devicon-nodejs-plain colored",
+  "express":"devicon-express-original",
+  "git":"devicon-git-plain colored",
+  "github":"devicon-github-original",
+  "docker":"devicon-docker-plain colored",
+  "kubernetes":"devicon-kubernetes-plain colored",
+  "linux":"devicon-linux-plain colored",
+  "postgresql":"devicon-postgresql-plain colored",
+  "mysql":"devicon-mysql-plain colored",
+  "mongodb":"devicon-mongodb-plain colored",
+  "redis":"devicon-redis-plain colored",
+  "aws":"devicon-amazonwebservices-plain-wordmark colored",
+  "azure":"devicon-azure-plain colored",
+  "gcp":"devicon-googlecloud-plain colored",
+  "google cloud":"devicon-googlecloud-plain colored",
+  "tensorflow":"devicon-tensorflow-original colored",
+  "pytorch":"devicon-pytorch-original colored",
+  "matplotlib":"devicon-matplotlib-plain colored",
+  "sql":"devicon-azuresqldatabase-plain colored"
+};
+
+const customSkillIcons={
+  "aws":"devicon-amazonwebservices-plain-wordmark colored",
+  "docker":"devicon-docker-plain colored",
+  "fastapi":"devicon-fastapi-plain colored",
+  "git":"devicon-git-plain colored",
+  "kubernetes":"devicon-kubernetes-plain colored",
+  "langchain":"⛓",
+  "llms":"◉",
+  "mlops":"⚙",
+  "numpy":"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg",
+  "pandas":"devicon-pandas-plain colored",
+  "postgresql":"devicon-postgresql-plain colored",
+  "python":"devicon-python-plain colored",
+  "pytorch":"devicon-pytorch-original colored",
+  "rag":"⌕",
+  "scikit learn":"devicon-scikitlearn-plain colored",
+  "scikit-learn":"devicon-scikitlearn-plain colored",
+  "sql":"devicon-azuresqldatabase-plain colored",
+  "statistics":"σ",
+  "system design":"◇"
+};
+
+function skillIcon(name){
+  const key=String(name||"").trim().toLowerCase();
+  const value=customSkillIcons[key];
+  if(value){
+    if(value.startsWith("http")) return `<img class="skillLogoImage" src="${value}" alt="${esc(name)} logo" />`;
+    if(value.includes("devicon-")) return `<i class="${value}" aria-hidden="true"></i>`;
+    return `<span class="skillFallback skillCustomLogo">${value}</span>`;
+  }
+  const cls=skillIconMap[key];
+  if(cls) return `<i class="${cls}" aria-hidden="true"></i>`;
+  return `<span class="skillFallback">${esc((name||"S")[0].toUpperCase())}</span>`;
+}
+
+function renderLibrary(list){$("skillsLibraryGrid").innerHTML=list.length?list.map(s=>`<div class="skillLibraryCard"><div class="skillLibraryIcon">${skillIcon(s.name)}</div><h3>${esc(s.name)}</h3><p>Technical learning material from your local knowledge base.</p><button type="button" data-skill="${esc(s.slug)}">View Skill Details →</button></div>`).join(""):'<div class="empty">No skills found.</div>';document.querySelectorAll("[data-skill]").forEach(b=>b.onclick=()=>skillDetails(b.dataset.skill))}
 function populateAnalyze(list){$("analyzeSkill").innerHTML='<option value="">Select a skill</option>'+list.map(s=>`<option value="${esc(s.name)}">${esc(s.name)}</option>`).join("")}
 async function skillDetails(slug){try{const d=await api(`/api/skills/${encodeURIComponent(slug)}`);openModal(d.name||slug,d.content||"No details available.",true)}catch(e){toast(e.message)}}
-async function analyzeSkill(){const skill=$("analyzeSkill").value,q=$("skillQuestion").value.trim(),r=$("skillAnalysisResult"),b=$("analyzeSkillButton");if(!skill)return toast("Please select a skill");b.disabled=true;b.textContent="Analyzing with Gemini...";r.innerHTML='<div class="loading"><div class="spinner"></div><div>Gemini is analyzing '+esc(skill)+'...</div></div>';try{const d=await api("/api/skill-analyze",{method:"POST",body:JSON.stringify({skill,question:q||null})});r.innerHTML=`<div class="analysisHeader"><div class="analysisSkillIcon">${esc(skill[0].toUpperCase())}</div><div><h3>${esc(skill)}</h3><span>Gemini-powered knowledge-base analysis</span></div></div><div class="markdown">${md(d.analysis||d.result||"")}</div>`;toast(`${skill} analysis complete`)}catch(e){r.innerHTML=`<div class="empty">⚠ Gemini analysis failed<br><br>${esc(e.message)}</div>`}finally{b.disabled=false;b.textContent="✦ Analyze Skill with Gemini"}}
+async function analyzeSkill(){if(skillAnalyzeBusy)return;const skill=$("analyzeSkill").value,q=$("skillQuestion").value.trim(),r=$("skillAnalysisResult"),b=$("analyzeSkillButton");if(!skill)return toast("Please select a skill");skillAnalyzeBusy=true;b.disabled=true;b.textContent="Analyzing with Gemini...";r.innerHTML='<div class="loading"><div class="spinner"></div><div>Gemini is analyzing '+esc(skill)+'...</div></div>';try{const d=await api("/api/skill-analyze",{method:"POST",body:JSON.stringify({skill,question:q||null})});r.innerHTML=`<div class="analysisHeader"><div class="analysisSkillIcon">${esc(skill[0].toUpperCase())}</div><div><h3>${esc(skill)}</h3><span>Gemini-powered knowledge-base analysis</span></div></div><div class="markdown">${md(d.analysis||d.result||"")}</div>`;toast(`${skill} analysis complete`)}catch(e){r.innerHTML=`<div class="empty">⚠ Gemini analysis failed<br><br>${esc(e.message)}</div>`}finally{skillAnalyzeBusy=false;b.disabled=false;b.textContent="✦ Analyze Skill with Gemini"}}
+function openFullSkillAnalysis(){
+const r=$("skillAnalysisResult");
+const content=r?.querySelector(".markdown");
+if(!content)return toast("Analyze a skill first");
+document.getElementById("modalBackdrop")?.remove();
+const x=document.createElement("div");
+x.id="modalBackdrop";
+x.className="modalBackdrop";
+x.innerHTML=`<div class="modal fullAnalysisModal"><button class="modalClose" type="button">×</button><h2>AI Skill Analysis</h2><div class="modalBody markdown">${content.innerHTML}</div><div class="modalFooter"><button class="primary">Close</button></div></div>`;
+document.body.appendChild(x);
+x.querySelector(".modalClose").onclick=()=>x.remove();
+x.querySelector(".modalFooter button").onclick=()=>x.remove();
+x.onclick=e=>{if(e.target===x)x.remove()};
+}
 function openModal(title,text,markdown=false){document.getElementById("modalBackdrop")?.remove();const x=document.createElement("div");x.id="modalBackdrop";x.className="modalBackdrop";x.innerHTML=`<div class="modal"><button class="modalClose" type="button">×</button><h2>${esc(title)}</h2><div class="modalBody ${markdown?'markdown':''}">${markdown?md(text):esc(text)}</div><div class="modalFooter"><button class="primary">Close</button></div></div>`;document.body.appendChild(x);x.querySelector(".modalClose").onclick=()=>x.remove();x.querySelector(".modalFooter button").onclick=()=>x.remove();x.onclick=e=>{if(e.target===x)x.remove()}}
 function download(){const d=analysisData||JSON.parse(localStorage.getItem("skillGapAnalysis")||"null");if(!d)return toast("Analyze your skills first");const r=latestRoadmap||localStorage.getItem("skillGapRoadmap")||"Not generated yet";const txt=["SKILL GAP ANALYZER REPORT","=========================",`Target Role: ${d.role}`,`Overall Match: ${d.match_percentage}%`,"","MATCHED SKILLS",...d.matched_skills.map(s=>"✓ "+s),"","SKILL GAPS",...d.skill_gaps.map(g=>`⚠ ${g.skill} — ${g.importance} — ${g.category}`),"","PERSONALIZED ROADMAP",r].join("\n");const u=URL.createObjectURL(new Blob([txt],{type:"text/plain;charset=utf-8"}));const a=document.createElement("a");a.href=u;a.download=`skill-gap-report-${Date.now()}.txt`;a.click();URL.revokeObjectURL(u);toast("Report downloaded")}
-function theme(t){["dark","ocean","forest","sunset"].forEach(x=>document.body.classList.remove(x));if(t!=="light")document.body.classList.add(t);document.querySelectorAll(".themeOption").forEach(b=>{b.classList.remove("active");b.querySelector(".themeCheck")?.remove()});const b=document.querySelector(`.themeOption[data-theme="${t}"]`);if(b){b.classList.add("active");const c=document.createElement("span");c.className="themeCheck";c.textContent="✓";b.appendChild(c)}localStorage.setItem("skillGapTheme",t)}
-document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll(".nav button").forEach(b=>b.onclick=()=>navigate(b.dataset.page));document.querySelectorAll(".themeOption").forEach(b=>b.onclick=()=>theme(b.dataset.theme));theme(localStorage.getItem("skillGapTheme")||"light");$("themeButton").onclick=()=>document.querySelector(".themeBox").scrollIntoView({behavior:"smooth",block:"center"});$("skillInput").onkeydown=e=>{if(e.key==="Enter"){e.preventDefault();addSkill(e.target.value)}};$("skills").onclick=e=>{if(e.target.dataset.remove!==undefined)e.target.closest(".tag")?.remove()};$("analyze").onclick=analyze;$("reset").onclick=resetSkills;$("generate").onclick=generate;$("download").onclick=download;$("viewFullRoadmap").onclick=()=>latestRoadmap||localStorage.getItem("skillGapRoadmap")?navigate("roadmap"):toast("Generate a roadmap first");$("analyzeSkillButton").onclick=analyzeSkill;$("skillSearch").oninput=e=>renderLibrary(allLibrarySkills.filter(s=>String(s.name).toLowerCase().includes(e.target.value.toLowerCase())));loadRoles();loadSkills();const saved=localStorage.getItem("skillGapAnalysis");if(saved)try{render(JSON.parse(saved))}catch{}});
+function theme(t){["dark","ocean","forest","sunset"].forEach(x=>document.body.classList.remove(x));if(t!=="light")document.body.classList.add(t);document.querySelectorAll(".themeOption").forEach(b=>{b.classList.remove("active");b.querySelector(".themeCheck")?.remove()});const b=document.querySelector(`.themeOption[data-theme="${t}"]`);if(b){b.classList.add("active");const c=document.createElement("span");c.className="themeCheck";c.textContent="✓";b.appendChild(c)}localStorage.setItem("skillGapTheme",t);renderAuthHeader()} 
+/* ===== Login/Register integration ===== */
+const AUTH_USER_KEY="skillGapCurrentUser";
+const THEME_KEY="skillGapTheme";
+function getCurrentUser(){try{return JSON.parse(localStorage.getItem(AUTH_USER_KEY)||"null")}catch{return null}}
+function authInitial(name){const clean=String(name||"User").trim();return (clean[0]||"U").toUpperCase()}
+function renderAuthHeader(){
+  const box=$("authHeader"); if(!box)return;
+  const user=getCurrentUser();
+  if(!user){
+    box.innerHTML='<a class="loginRegisterBtn" href="/auth/login">↪ &nbsp;Login / Register</a>';
+    return;
+  }
+  box.innerHTML=`<div class="userProfile"><span class="userName" title="${esc(user.name||user.email||"User")}">${esc(user.name||user.email||"User")}</span><div class="userAvatar" title="${esc(user.name||"User")}">${esc(authInitial(user.name))}</div><button type="button" class="logoutBtn" id="logoutBtn">Logout</button></div>`;
+  $("logoutBtn")?.addEventListener("click",()=>{
+    localStorage.removeItem(AUTH_USER_KEY);
+    renderAuthHeader();
+    toast("Logged out successfully");
+  });
+}
+function syncAuthTheme(){
+  const saved=localStorage.getItem(THEME_KEY)||"light";
+  theme(saved);
+}
+document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll(".nav button").forEach(b=>b.onclick=()=>navigate(b.dataset.page));document.querySelectorAll(".themeOption").forEach(b=>b.onclick=()=>theme(b.dataset.theme));theme(localStorage.getItem("skillGapTheme")||"light");$("skillInput").onkeydown=e=>{if(e.key==="Enter"){e.preventDefault();addSkill(e.target.value)}};$("skills").onclick=e=>{if(e.target.dataset.remove!==undefined)e.target.closest(".tag")?.remove()};$("analyze").onclick=analyze;$("reset").onclick=resetSkills;$("generate").onclick=generate;$("download").onclick=download;$("viewFullRoadmap").onclick=()=>latestRoadmap||localStorage.getItem("skillGapRoadmap")?navigate("roadmap"):toast("Generate a roadmap first");$("analyzeSkillButton").onclick=analyzeSkill;$("viewFullSkillAnalysis").onclick=openFullSkillAnalysis;$("skillSearch").oninput=e=>renderLibrary(allLibrarySkills.filter(s=>String(s.name).toLowerCase().includes(e.target.value.toLowerCase())));loadRoles();loadSkills();renderAuthHeader();const saved=localStorage.getItem("skillGapAnalysis");if(saved)try{render(JSON.parse(saved))}catch{}});
 </script>
 </body>
 </html>

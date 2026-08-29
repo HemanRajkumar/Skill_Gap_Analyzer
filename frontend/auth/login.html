@@ -1,0 +1,538 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login | Skill Gap Analyzer</title>
+<link rel="stylesheet" href="auth.css">
+
+<style>
+/* =========================================================
+   LOGIN-SPECIFIC ERROR / RESET UI
+   ========================================================= */
+
+.auth-message {
+  min-height: 22px;
+  text-align: center;
+  margin-top: 16px;
+  padding: 0 4px;
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.auth-message.error {
+  color: #d9364f;
+}
+
+.auth-message.success {
+  color: #07966b;
+}
+
+.reset-box {
+  margin: 20px 0 4px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--input);
+}
+
+.reset-box[hidden] {
+  display: none;
+}
+
+.reset-box h3 {
+  margin: 0 0 6px;
+  font-size: 17px;
+}
+
+.reset-box p {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.reset-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.reset-actions button {
+  height: 44px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.reset-submit {
+  border: 0;
+  background: linear-gradient(90deg,#7436f5,#227ef1);
+  color: white;
+  font-weight: 700;
+}
+
+.reset-cancel {
+  border: 1px solid var(--border);
+  background: var(--input);
+  color: var(--text);
+}
+</style>
+</head>
+
+<body class="system">
+
+<div class="page-shell">
+
+<header class="topbar">
+
+  <a class="brand" href="/">
+    <span class="brand-mark">↗</span>
+    <span>Skill Gap <b>Analyzer</b></span>
+  </a>
+
+  <div class="top-actions">
+
+    <div class="theme-switcher">
+      <button class="theme-btn" data-theme-choice="light">
+        ☀ Light
+      </button>
+
+      <button class="theme-btn" data-theme-choice="dark">
+        ◐ Dark
+      </button>
+
+      <button class="theme-btn" data-theme-choice="system">
+        ◉ System
+      </button>
+    </div>
+
+    <a class="back-home" href="/">
+      ← &nbsp;Back to Home
+    </a>
+
+  </div>
+
+</header>
+
+
+<main class="auth-layout">
+
+
+<section class="intro">
+
+  <p class="eyebrow">
+    Welcome back! 👋
+  </p>
+
+  <h1>
+    Login to your<br>
+    <span>Skill Gap Analyzer</span>
+  </h1>
+
+  <p class="intro-copy">
+    Continue your learning journey and analyze your skills,
+    identify gaps, and achieve your career goals faster.
+  </p>
+
+
+  <div class="feature-list">
+
+    <div class="feature">
+      <div class="feature-icon">⌕</div>
+
+      <div>
+        <strong>Analyze Skills</strong>
+        <p>
+          Get a detailed analysis of your current skills.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="feature">
+      <div class="feature-icon pink">◎</div>
+
+      <div>
+        <strong>Identify Gaps</strong>
+        <p>
+          Discover skill gaps and get AI-powered recommendations.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="feature">
+      <div class="feature-icon green">⌁</div>
+
+      <div>
+        <strong>Personalized Roadmap</strong>
+        <p>
+          Receive a customized learning roadmap just for you.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="feature">
+      <div class="feature-icon blue">▣</div>
+
+      <div>
+        <strong>Learning Resources</strong>
+        <p>
+          Access curated resources to help you learn and grow.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="mini-dashboard">
+
+    <div class="mini-sidebar">
+      <div class="mini-active">⌂</div>
+      <div>⌕</div>
+      <div>▱</div>
+      <div>⌁</div>
+      <div>▣</div>
+    </div>
+
+    <div class="mini-main">
+
+      <div class="mini-cards">
+
+        <div class="score-card">
+
+          <small>Match Score</small>
+
+          <div class="ring">
+            <b>75%</b>
+          </div>
+
+          <small>Overall Match</small>
+
+        </div>
+
+
+        <div class="gap-card">
+
+          <small>Top Skill Gaps</small>
+
+          <p>
+            ● Machine Learning
+            <em>High</em>
+          </p>
+
+          <p>
+            ● System Design
+            <em>High</em>
+          </p>
+
+          <p>
+            ● Docker
+            <em>Medium</em>
+          </p>
+
+          <p>
+            ● Kubernetes
+            <em>Medium</em>
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="chart-card">
+
+        <small>Skill Progress</small>
+
+        <svg
+          viewBox="0 0 520 130"
+          preserveAspectRatio="none"
+        >
+          <polyline
+            points="5,110 70,85 130,94 190,52 245,67 310,35 365,55 425,20 510,8"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="4"
+          />
+        </svg>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section class="auth-card">
+
+  <div class="card-heading">
+
+    <h2>
+      Welcome back!
+    </h2>
+
+    <p>
+      Login to continue your learning journey.
+    </p>
+
+  </div>
+
+
+  <form id="loginForm" novalidate>
+
+    <label>
+      Email address
+    </label>
+
+    <div class="input-wrap">
+
+      <span>✉</span>
+
+      <input
+        id="loginEmail"
+        type="email"
+        autocomplete="email"
+        placeholder="Enter your email"
+        required
+      >
+
+    </div>
+
+
+    <label>
+      Password
+    </label>
+
+    <div class="input-wrap">
+
+      <span>♙</span>
+
+      <input
+        id="loginPassword"
+        type="password"
+        autocomplete="current-password"
+        placeholder="Enter your password"
+        required
+      >
+
+      <button
+        class="password-toggle"
+        type="button"
+        data-toggle-password="loginPassword"
+        aria-label="Show password"
+      >
+        ◉
+      </button>
+
+    </div>
+
+
+    <div class="form-row">
+
+      <span></span>
+
+      <a
+        href="#"
+        id="forgotPassword"
+      >
+        Forgot password?
+      </a>
+
+    </div>
+
+
+    <button
+      class="primary-btn"
+      type="submit"
+    >
+      ↪ &nbsp; Login
+    </button>
+
+
+    <!-- =====================================================
+         FORGOT PASSWORD PANEL
+         ===================================================== -->
+
+    <div
+      class="reset-box"
+      id="resetBox"
+      hidden
+    >
+
+      <h3>
+        Reset your password
+      </h3>
+
+      <p>
+        Enter the email you used to register and choose a new
+        password.
+      </p>
+
+
+      <label>
+        Account email
+      </label>
+
+      <div class="input-wrap">
+
+        <span>✉</span>
+
+        <input
+          id="resetEmail"
+          type="email"
+          autocomplete="email"
+          placeholder="Enter your account email"
+        >
+
+      </div>
+
+
+      <label>
+        New password
+      </label>
+
+      <div class="input-wrap">
+
+        <span>♙</span>
+
+        <input
+          id="resetNewPassword"
+          type="password"
+          autocomplete="new-password"
+          placeholder="At least 8 characters"
+        >
+
+        <button
+          class="password-toggle"
+          type="button"
+          data-toggle-password="resetNewPassword"
+          aria-label="Show password"
+        >
+          ◉
+        </button>
+
+      </div>
+
+
+      <label>
+        Confirm new password
+      </label>
+
+      <div class="input-wrap">
+
+        <span>♙</span>
+
+        <input
+          id="resetConfirmPassword"
+          type="password"
+          autocomplete="new-password"
+          placeholder="Confirm new password"
+        >
+
+        <button
+          class="password-toggle"
+          type="button"
+          data-toggle-password="resetConfirmPassword"
+          aria-label="Show password"
+        >
+          ◉
+        </button>
+
+      </div>
+
+
+      <div class="reset-actions">
+
+        <button
+          type="button"
+          class="reset-cancel"
+          id="cancelReset"
+        >
+          Cancel
+        </button>
+
+        <button
+          type="submit"
+          form="resetForm"
+          class="reset-submit"
+        >
+          Reset Password
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- Hidden form used by the reset panel -->
+    <form id="resetForm" novalidate></form>
+
+
+    <div class="divider">
+      <span>
+        or continue with
+      </span>
+    </div>
+
+
+    <button
+      class="google-btn"
+      type="button"
+      id="googleDemo"
+    >
+      G &nbsp; Continue with Google
+    </button>
+
+
+    <p class="switch-text">
+      Don't have an account?
+      <a href="register.html">
+        Create account →
+      </a>
+    </p>
+
+
+    <!--
+      Error and success messages appear HERE on the screen.
+      Examples:
+      "Incorrect password. Please try again or use Forgot password."
+      "No account was found with this email address."
+      "Password reset successfully..."
+    -->
+
+    <div
+      id="authMessage"
+      class="auth-message"
+      aria-live="polite"
+    ></div>
+
+  </form>
+
+</section>
+
+</main>
+
+
+<footer>
+  ♢ &nbsp;
+  By continuing, you agree to our
+  <a href="#">Terms of Service</a>
+  and
+  <a href="#">Privacy Policy</a>.
+</footer>
+
+</div>
+
+
+<script src="auth.js"></script>
+
+</body>
+</html>

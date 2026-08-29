@@ -27,3 +27,4 @@ class RoadmapResponse(BaseModel):
 class SkillAnalyzeRequest(BaseModel):
     skill: str
     question: str | None = None
+    

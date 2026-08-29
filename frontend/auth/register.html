@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Account | Skill Gap Analyzer</title>
+<link rel="stylesheet" href="auth.css">
+</head>
+<body class="system">
+<div class="page-shell">
+<header class="topbar">
+  <a class="brand" href="/"><span class="brand-mark">↗</span><span>Skill Gap <b>Analyzer</b></span></a>
+  <div class="top-actions">
+    <div class="theme-switcher">
+      <button class="theme-btn" data-theme-choice="light">☀ Light</button>
+      <button class="theme-btn" data-theme-choice="dark">◐ Dark</button>
+      <button class="theme-btn" data-theme-choice="system">◉ System</button>
+    </div>
+    <a class="back-home" href="/">← &nbsp;Back to Home</a>
+  </div>
+</header>
+
+<main class="auth-layout">
+<section class="intro">
+  <p class="eyebrow">Create your account</p>
+  <h1>Start your<br><span>learning journey</span></h1>
+  <p class="intro-copy">Join learners who are analyzing their skills, closing gaps, and building better careers.</p>
+  <div class="feature-list">
+    <div class="feature"><div class="feature-icon">⌕</div><div><strong>Analyze Skills</strong><p>Get a detailed analysis of your current skills.</p></div></div>
+    <div class="feature"><div class="feature-icon pink">◎</div><div><strong>Identify Gaps</strong><p>Discover skill gaps and get AI-powered recommendations.</p></div></div>
+    <div class="feature"><div class="feature-icon green">⌁</div><div><strong>Personalized Roadmap</strong><p>Receive a customized learning roadmap just for you.</p></div></div>
+    <div class="feature"><div class="feature-icon blue">▣</div><div><strong>Learning Resources</strong><p>Access curated resources to help you learn and grow.</p></div></div>
+  </div>
+  <div class="mini-dashboard">
+    <div class="mini-sidebar"><div class="mini-active">⌂</div><div>⌕</div><div>▱</div><div>⌁</div><div>▣</div></div>
+    <div class="mini-main">
+      <div class="mini-cards">
+        <div class="score-card"><small>Match Score</small><div class="ring"><b>75%</b></div><small>Overall Match</small></div>
+        <div class="gap-card"><small>Top Skill Gaps</small><p>● Machine Learning <em>High</em></p><p>● System Design <em>High</em></p><p>● Docker <em>Medium</em></p><p>● Kubernetes <em>Medium</em></p></div>
+      </div>
+      <div class="chart-card"><small>Skill Progress</small><svg viewBox="0 0 520 130" preserveAspectRatio="none"><polyline points="5,110 70,85 130,94 190,52 245,67 310,35 365,55 425,20 510,8" fill="none" stroke="currentColor" stroke-width="4"/></svg></div>
+    </div>
+  </div>
+</section>
+
+<section class="auth-card">
+  <div class="card-heading"><h2>Create your account</h2><p>Fill in the details to get started.</p></div>
+  <form id="registerForm" novalidate>
+    <label>Full name</label>
+    <div class="input-wrap"><span>♙</span><input id="registerName" type="text" autocomplete="name" placeholder="Enter your full name" required></div>
+
+    <label>Email address</label>
+    <div class="input-wrap"><span>✉</span><input id="registerEmail" type="email" autocomplete="email" placeholder="Enter your email" required></div>
+
+    <label>Password</label>
+    <div class="input-wrap"><span>♙</span><input id="registerPassword" type="password" autocomplete="new-password" placeholder="Create a password" required><button class="password-toggle" type="button" data-toggle-password="registerPassword">◉</button></div>
+    <p class="terms">Password must be at least 8 characters.</p>
+    <div class="password-meter"><i></i><i></i><i></i><i></i></div>
+
+    <label>Confirm password</label>
+    <div class="input-wrap"><span>♙</span><input id="confirmPassword" type="password" autocomplete="new-password" placeholder="Confirm your password" required><button class="password-toggle" type="button" data-toggle-password="confirmPassword">◉</button></div>
+
+    <p class="terms"><label style="display:inline;font-weight:400"><input id="agreeTerms" type="checkbox"> I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</label></p>
+
+    <button class="primary-btn" type="submit">↪ &nbsp; Create Account</button>
+    <div class="divider"><span>or continue with</span></div>
+    <button class="google-btn" type="button" id="googleDemo">G &nbsp; Continue with Google</button>
+    <p class="switch-text">Already have an account? <a href="login.html">Login →</a></p>
+    <div id="authMessage" class="auth-message" aria-live="polite"></div>
+  </form>
+</section>
+</main>
+<footer>♢ &nbsp; By continuing, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</footer>
+</div>
+<script src="auth.js"></script>
+</body>
+</html>
